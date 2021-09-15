@@ -1,7 +1,7 @@
 const transactionView = async () => {
     var address = document.getElementById("address").value;
 
-    var url = "https://api.etherscan.io/api?module=account&action=tokennfttx&address=";
+    var url = "https://api.etherscan.io/api?module=account&action=txlist&address=";
     url = url.concat(address);
     url = url.concat("&startblock=0&endblock=999999999&page=1&offset=1000&sort=asc&apikey=KEJR7RWVDD3ZKRM1HBCUSNS2BTZG4JQSZA");
     // alert(url);
