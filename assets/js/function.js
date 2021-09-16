@@ -19,7 +19,6 @@ const transactionView = async () => {
     const myJson = await response.json();
     
     var obj = myJson.result;
-    // console.log(obj);
 
     $(document).ready(function () {
         var funcAddr = '';
