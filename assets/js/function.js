@@ -27,7 +27,8 @@ const transactionView = async () => {
         html += '<tr>';
         var flag = 0;
         $.each(obj[0], function(index, value){
-            html += '<th>'+index+'</th>';
+            if(index != "input")
+                html += '<th>'+index+'</th>';
         });
         html += '<th>'+"function"+'</th>';
         html += '</tr>';
@@ -36,8 +37,9 @@ const transactionView = async () => {
             var subHtml = '<tr>';
             // html += '<tr>';
             $.each(value, function(index2, value2){
-                subHtml += '<td>'+value2+'</td>';
-               if(index2 == "input"){
+                if(index2 != "input")
+                    subHtml += '<td>'+value2+'</td>';
+                else {
                     funcAddr = value2.substr(0, 10);
                     // signText = getSignatureText(signObj.results, funcAddr);
                }
