@@ -71,22 +71,6 @@ function until(conditionFunction) {
     return new Promise(poll);
   }
 
-// const getSignatureText = (obj, address) => {
-//     console.log("---------address------------");
-//     console.log(address);
-//     $.each(obj, function(index, value){
-//         $.each(value, function(index2, value2){
-//             console.log("----------value2------------")
-//             console.log(value2)
-//             console.log( typeof value2)
-//             // var str = value2.toString();
-//             if(value2 === "0x379607f5"){
-//                 console.log("true");
-//                 // console.log("----------value2-value2----------")
-//                 // console.log(value2);
-//                 return value2.text_signature;
-//             }
-//         });
-//     });
-//     return '';
-// }
+const openseaFilter = () => {
+    
+}
