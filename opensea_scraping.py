@@ -8,7 +8,7 @@ from warnings import warn
 import json
 import pandas as pd
 
-url = 'http://web.archive.org/cdx/search/cdx?url=opensea.io&collapse=digest&from=20210305&to=20210916&output=json'
+url = 'http://web.archive.org/cdx/search/cdx?url=opensea.io&collapse=digest&from=20210601&to=20210704&output=json'
 
 urls = rq.get(url).text
 parse_url = json.loads(urls) #parses the JSON from urls.
@@ -38,9 +38,12 @@ for url in url_list:    # Scrap these URLs
         continue
 
     script_content = soup.find_all('script')[5].text    # fifth script tag is target
+    print(script_content)
     if(script_content[:16] != "window.__wired__"):      # 16 letters are compared
         continue
 
+    print("-----------HTML PARSER--------------")
+    
     json_string = soup.find_all('script')[5].text[17:]      # Remove "window.__wired__="
     stud_obj = json.loads(json_string)      # Convert string to json object
 
